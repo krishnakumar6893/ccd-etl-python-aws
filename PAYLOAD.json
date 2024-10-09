@@ -1,0 +1,113 @@
+{
+   "DBInstance":{
+      "DBInstanceIdentifier":"cdc-python-aws-etl",
+      "DBInstanceClass":"db.t3.micro",
+      "Engine":"postgres",
+      "DBInstanceStatus":"creating",
+      "MasterUsername":"guest",
+      "DBName":"cdc_python_aws_etl",
+      "AllocatedStorage":10,
+      "PreferredBackupWindow":"04:27-04:57",
+      "BackupRetentionPeriod":1,
+      "DBSecurityGroups":[
+
+      ],
+      "VpcSecurityGroups":[
+         {
+            "VpcSecurityGroupId":"sg-02cd8d80eb50df912",
+            "Status":"active"
+         }
+      ],
+      "DBParameterGroups":[
+         {
+            "DBParameterGroupName":"default.postgres16",
+            "ParameterApplyStatus":"in-sync"
+         }
+      ],
+      "DBSubnetGroup":{
+         "DBSubnetGroupName":"cdc-python-aws-etl",
+         "DBSubnetGroupDescription":"cdc-python-aws-etl",
+         "VpcId":"vpc-0dbade05c9fdea8f2",
+         "SubnetGroupStatus":"Complete",
+         "Subnets":[
+            {
+               "SubnetIdentifier":"subnet-035fbdc70d6fe7a3a",
+               "SubnetAvailabilityZone":{
+                  "Name":"eu-west-1b"
+               },
+               "SubnetOutpost":{
+
+               },
+               "SubnetStatus":"Active"
+            },
+            {
+               "SubnetIdentifier":"subnet-0298a46992b00aecd",
+               "SubnetAvailabilityZone":{
+                  "Name":"eu-west-1a"
+               },
+               "SubnetOutpost":{
+
+               },
+               "SubnetStatus":"Active"
+            }
+         ]
+      },
+      "PreferredMaintenanceWindow":"fri:22:16-fri:22:46",
+      "PendingModifiedValues":{
+         "MasterUserPassword":"****"
+      },
+      "MultiAZ":false,
+      "EngineVersion":"16.3",
+      "AutoMinorVersionUpgrade":true,
+      "ReadReplicaDBInstanceIdentifiers":[
+
+      ],
+      "LicenseModel":"postgresql-license",
+      "OptionGroupMemberships":[
+         {
+            "OptionGroupName":"default:postgres-16",
+            "Status":"in-sync"
+         }
+      ],
+      "PubliclyAccessible":true,
+      "StorageType":"gp2",
+      "DbInstancePort":0,
+      "StorageEncrypted":false,
+      "DbiResourceId":"db-HTXT4BGZ26O3HKFGPYP4EMEMKE",
+      "CACertificateIdentifier":"rds-ca-rsa2048-g1",
+      "DomainMemberships":[
+
+      ],
+      "CopyTagsToSnapshot":false,
+      "MonitoringInterval":0,
+      "DBInstanceArn":"arn:aws:rds:eu-west-1:236447642201:db:cdc-python-aws-etl",
+      "IAMDatabaseAuthenticationEnabled":false,
+      "PerformanceInsightsEnabled":false,
+      "DeletionProtection":false,
+      "AssociatedRoles":[
+
+      ],
+      "TagList":[
+
+      ],
+      "CustomerOwnedIpEnabled":false,
+      "BackupTarget":"region",
+      "NetworkType":"IPV4",
+      "StorageThroughput":0,
+      "CertificateDetails":{
+         "CAIdentifier":"rds-ca-rsa2048-g1"
+      }
+   },
+   "ResponseMetadata":{
+      "RequestId":"89649905-53fa-42f3-ac2a-6cd90aafdfae",
+      "HTTPStatusCode":200,
+      "HTTPHeaders":{
+         "x-amzn-requestid":"89649905-53fa-42f3-ac2a-6cd90aafdfae",
+         "strict-transport-security":"max-age=31536000",
+         "content-type":"text/xml",
+         "content-length":"3366",
+         "date":"Mon, 30 Sep 2024 12:06:41 GMT"
+      },
+      "RetryAttempts":0
+   }
+}

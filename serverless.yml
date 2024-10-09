@@ -1,0 +1,31 @@
+service: cdc-python-aws-etl
+provider:
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: eu-west-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "sns:Publish"
+      Resource: !Ref SNS
+
+functions:
+  cdc-python-aws-etl:
+    handler: lambda.lambda_handler
+    onError: !Ref SNS
+    environment:
+      TOPIC_ARN: !Ref SNS
+      DB_TABLE: covid_data
+    layers:
+       - arn:aws:lambda:eu-west-1:236447642201:layer:psycopg2:2
+
+resources:
+  Resources:
+    SNS:
+      Type: AWS::SNS::Topic
+      Properties:
+        TopicName: cdc-python-aws-etl
+        Subscription:
+          - Protocol: email
+            Endpoint: "krishnakumar.santhanam@immo.capital"
